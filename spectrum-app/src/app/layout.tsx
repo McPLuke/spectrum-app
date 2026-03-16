@@ -1,28 +1,29 @@
-import "./globals.css";
+import "./globals.css"
+
+import Header from "@/components/layout/Header"
+import Footer from "@/components/layout/Footer"
 
 export const metadata = {
   title: "Spectrum",
   description: "Self-representation profiles for the autistic spectrum"
-};
+}
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
       <body>
-        <header className="p-4 border-b">
-          <h1 className="text-xl font-semibold">Spectrum</h1>
-        </header>
+        <Header />
 
-        <main className="p-6">{children}</main>
+        <main className="p-6">
+          {children}
+        </main>
 
-        <footer className="p-4 border-t text-sm">
-          Spectrum Project
-        </footer>
+        <Footer />
       </body>
     </html>
-  );
+  )
 }
