@@ -1,25 +1,28 @@
 import { sampleProfile } from "@/lib/data/sampleProfile"
-import Card from "@/components/ui/Card"
+
+import ProfileCard from "@/components/profile/ProfileCard"
+import StrengthList from "@/components/profile/StrengthList"
+import SupportNeedsList from "@/components/profile/SupportNeedsList"
 
 export default function Profile() {
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 max-w-2xl">
 
-      <h1 className="text-3xl font-bold">Profile</h1>
+      <h1 className="text-3xl font-bold">
+        Profile
+      </h1>
 
-      <Card>
-        <h2 className="text-xl font-semibold">
-          {sampleProfile.displayName}
-        </h2>
+      <ProfileCard
+        displayName={sampleProfile.displayName}
+        bio={sampleProfile.bio}
+        isPublic={sampleProfile.isPublic}
+      />
 
-        <p className="text-gray-600 mt-2">
-          {sampleProfile.bio}
-        </p>
+      <StrengthList strengths={sampleProfile.strengths} />
 
-        <p className="text-sm mt-4">
-          Visibility: {sampleProfile.isPublic ? "Public" : "Private"}
-        </p>
-      </Card>
+      <SupportNeedsList
+        supportNeeds={sampleProfile.supportNeeds}
+      />
 
     </div>
   )
