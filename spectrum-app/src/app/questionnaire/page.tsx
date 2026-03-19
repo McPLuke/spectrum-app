@@ -5,6 +5,7 @@ import { traitCategories } from "@/lib/data/traits"
 
 import TraitSlider from "@/components/questionnaire/TraitSlider"
 import CategoryStepper from "@/components/questionnaire/CategoryStepper"
+import SpectrumBarChart from "@/components/charts/SpectrumBarChart"
 
 export default function Questionnaire() {
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0)
@@ -19,6 +20,13 @@ export default function Questionnaire() {
       [traitId]: value,
     }))
   }
+
+  const chartData = traitCategories.flatMap((category) =>
+  category.traits.map((trait) => ({
+    name: trait.label,
+    value: responses[trait.id] || 3,
+  }))
+)
 
   return (
     <div className="space-y-8 max-w-xl">
@@ -46,6 +54,14 @@ export default function Questionnaire() {
           />
         ))}
 
+      </div>
+
+      <div className="mt-10">
+        <h3 className="font-semibold mb-4">
+         Visual Summary
+        </h3>
+
+        <SpectrumBarChart data={chartData} />
       </div>
 
       <CategoryStepper
