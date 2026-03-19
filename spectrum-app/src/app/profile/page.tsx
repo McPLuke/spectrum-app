@@ -1,4 +1,5 @@
 import { sampleProfile } from "@/lib/data/sampleProfile"
+import Card from "@/components/ui/Card"
 
 export default function Profile() {
   return (
@@ -6,21 +7,19 @@ export default function Profile() {
 
       <h1 className="text-3xl font-bold">Profile</h1>
 
-      <div className="border p-6 rounded max-w-xl">
-
+      <Card>
         <h2 className="text-xl font-semibold">
           {sampleProfile.displayName}
         </h2>
 
-        <p className="text-sm text-gray-600">
+        <p className="text-gray-600 mt-2">
           {sampleProfile.bio}
         </p>
 
-        <div className="mt-4 text-sm">
+        <p className="text-sm mt-4">
           Visibility: {sampleProfile.isPublic ? "Public" : "Private"}
-        </div>
-
-      </div>
+        </p>
+      </Card>
 
     </div>
   )

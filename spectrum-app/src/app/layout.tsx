@@ -2,6 +2,7 @@ import "./globals.css"
 
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
+import Container from "@/components/ui/Container"
 
 export const metadata = {
   title: "Spectrum",
@@ -18,9 +19,9 @@ export default function RootLayout({
       <body>
         <Header />
 
-        <main className="p-6">
+        <Container>
           {children}
-        </main>
+        </Container>
 
         <Footer />
       </body>
