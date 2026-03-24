@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { traitCategories } from "@/lib/data/traits"
+import { TraitResponses } from "@/lib/types/responses"
 
 import TraitSlider from "@/components/questionnaire/TraitSlider"
 import CategoryStepper from "@/components/questionnaire/CategoryStepper"
@@ -10,7 +11,7 @@ import SpectrumBarChart from "@/components/charts/SpectrumBarChart"
 export default function Questionnaire() {
   const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0)
 
-  const [responses, setResponses] = useState<Record<string, number>>({})
+  const [responses, setResponses] = useState<TraitResponses>({})
 
   const currentCategory = traitCategories[currentCategoryIndex]
 
@@ -63,6 +64,19 @@ export default function Questionnaire() {
 
         <SpectrumBarChart data={chartData} />
       </div>
+
+      <button
+        onClick={() => {
+        localStorage.setItem(
+        "spectrumResponses",
+        JSON.stringify(responses)
+        )
+        alert("Responses saved!")
+      }}
+      className="mt-6 px-4 py-2 bg-black text-white rounded"
+        >
+         Save Responses
+        </button>
 
       <CategoryStepper
         current={currentCategoryIndex}

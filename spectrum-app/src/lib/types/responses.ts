@@ -1,0 +1,1 @@
+export type TraitResponses = Record<string, number>
