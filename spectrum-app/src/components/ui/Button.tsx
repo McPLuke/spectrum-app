@@ -16,8 +16,10 @@ export default function Button({
     "px-4 py-2 rounded text-sm font-medium transition"
 
   const variants = {
-    primary: "bg-black text-white hover:bg-gray-800",
-    secondary: "border border-gray-300 hover:bg-gray-100",
+  primary:
+    "bg-spectrum-primary text-white hover:opacity-90",
+  secondary:
+    "bg-white border border-spectrum-border hover:bg-gray-50",
   }
 
   const className = `${baseStyles} ${variants[variant]}`
