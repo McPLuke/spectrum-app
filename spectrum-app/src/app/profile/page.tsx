@@ -13,10 +13,13 @@ import { useEffect, useState } from "react"
 import { TraitResponses } from "@/lib/types/responses"
 import TraitSummary from "@/components/profile/TraitSummary"
 
+import { generateInsights } from "@/lib/utils/generateInsights"
+import GeneratedSummary from "@/components/profile/GeneratedSummary"
+
 // This page is a placeholder for the user's profile. It will display their strengths, support needs, and trait summary based on their responses.
 export default function Profile() {
   const [responses, setResponses] = useState<TraitResponses>({})
-
+  
   useEffect(() => {
     const stored = localStorage.getItem("spectrumResponses")
     if (stored) {
@@ -30,6 +33,8 @@ export default function Profile() {
       value: responses[trait.id] || 3,
     }))
   )
+
+  const insights = generateInsights(responses)
 
   return (
     <div className="space-y-8 max-w-2xl mx-auto px-4 py-8">
@@ -56,6 +61,10 @@ export default function Profile() {
 
       {Object.keys(responses).length > 0 && (
         <SpectrumBarChart data={chartData} />
+      )}
+
+      {insights.length > 0 && (
+        <GeneratedSummary insights={insights} />
       )}
 
     </div>
