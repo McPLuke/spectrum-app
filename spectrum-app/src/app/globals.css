@@ -1,8 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #F7F9FB;
+  --surface: #FFFFFF;
+
+  --primary: #4A6FA5;
+  --secondary: #7AA6C2;
+  --accent: #A3C4BC;
+
+  --text: #1F2933;
+  --muted: #6B7280;
+  --border: #E5E7EB;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -12,10 +20,18 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #F7F9FB;
-  color: #1F2933;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
 }
 
 h1, h2, h3 {
@@ -32,5 +48,11 @@ button {
 
 :focus {
   outline: 2px solid #4A6FA5;
+  outline-offset: 2px;
+}
+
+/* Accessible focus */
+:focus-visible {
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }

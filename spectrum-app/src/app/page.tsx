@@ -8,7 +8,7 @@ export default function Home() {
       <section className="space-y-4">
         <h1 className="text-4xl font-bold">Spectrum</h1>
 
-        <p className="text-lg text-gray-600">
+        <p className="text-lg text-spectrum-muted">
           A self-representation platform designed to help individuals
           describe their strengths, challenges, and support needs.
         </p>
@@ -27,7 +27,7 @@ export default function Home() {
           <h2 className="font-semibold mb-2">
             Profile Your Experience
           </h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-spectrum-muted">
             Describe how you interact with the world.
           </p>
         </Card>
@@ -36,7 +36,7 @@ export default function Home() {
           <h2 className="font-semibold mb-2">
             Highlight Strengths
           </h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-spectrum-muted">
             Showcase what you do best.
           </p>
         </Card>
@@ -45,7 +45,7 @@ export default function Home() {
           <h2 className="font-semibold mb-2">
             Share Support Needs
           </h2>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-spectrum-muted">
             Communicate what helps you succeed.
           </p>
         </Card>

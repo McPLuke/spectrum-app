@@ -13,7 +13,7 @@ export default function Button({
   variant = "primary",
 }: ButtonProps) {
   const baseStyles =
-    "px-4 py-2 rounded text-sm font-medium transition"
+    "px-4 py-2 rounded-md text-sm font-medium transition focus-visible:outline-none"
 
   const variants = {
   primary:

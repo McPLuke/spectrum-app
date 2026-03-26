@@ -14,7 +14,7 @@ export default function TraitSlider({
   onChange,
 }: Props) {
   return (
-    <div className="space-y-2">
+    <div className="bg-white p-6 rounded-xl border border-spectrum-border space-y-6">
       <label className="font-medium">{label}</label>
 
       <input
@@ -23,10 +23,10 @@ export default function TraitSlider({
         max={5}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full"
+        className="w-full accent-spectrum-primary"
       />
 
-      <div className="flex justify-between text-xs text-gray-500">
+      <div className="flex justify-between text-xs text-spectrum-muted">
         <span>{minLabel}</span>
         <span>{maxLabel}</span>
       </div>

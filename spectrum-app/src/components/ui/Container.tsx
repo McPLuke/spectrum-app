@@ -1,12 +1,12 @@
 import { ReactNode } from "react"
 
-type ContainerProps = {
+/*type ContainerProps = {
   children: ReactNode
-}
+}*/
 
-export default function Container({ children }: ContainerProps) {
+export default function Container({ children }: { children: ReactNode }) {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-10">
+    <div className="flex-grow max-w-4xl mx-auto px-6 py-10">
       {children}
     </div>
   )

@@ -22,8 +22,8 @@ export default function About() {
         understanding how someone experiences the world.
       </p>
 
-      <p className="text-sm text-gray-600">
-        Spectrum profiles are self-reported and are not intended
+      <p className="text-sm text-spectrum-muted">
+        Disclaimer: Spectrum profiles are self-reported and are not intended
         to provide medical or clinical diagnoses.
       </p>
 
