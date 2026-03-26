@@ -16,6 +16,9 @@ import TraitSummary from "@/components/profile/TraitSummary"
 import { generateInsights } from "@/lib/utils/generateInsights"
 import GeneratedSummary from "@/components/profile/GeneratedSummary"
 
+import { generateRecommendations } from "@/lib/utils/generateRecommendations"
+import SupportRecommendations from "@/components/profile/SupportRecommendations"
+
 // This page is a placeholder for the user's profile. It will display their strengths, support needs, and trait summary based on their responses.
 export default function Profile() {
   const [responses, setResponses] = useState<TraitResponses>({})
@@ -35,6 +38,7 @@ export default function Profile() {
   )
 
   const insights = generateInsights(responses)
+  const recommendations = generateRecommendations(responses)
 
   return (
     <div className="space-y-8 max-w-2xl mx-auto px-4 py-8">
@@ -66,6 +70,10 @@ export default function Profile() {
       {insights.length > 0 && (
         <GeneratedSummary insights={insights} />
       )}
+
+      {recommendations.length > 0 && (
+        <SupportRecommendations recommendations={recommendations} />
+    )}
 
     </div>
   )
