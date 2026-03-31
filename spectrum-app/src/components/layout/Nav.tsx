@@ -6,6 +6,7 @@ export default function Nav() {
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>
       <Link href="/profile">Profile</Link>
+      <a href="/profile/share">Share Profile</a>
       <Link href="/questionnaire">Questionnaire</Link>
       <Link href="/settings">Settings</Link>
     </nav>

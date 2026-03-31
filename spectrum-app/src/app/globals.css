@@ -56,3 +56,17 @@ button {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
+
+@media print {
+  body {
+    background: white;
+  }
+
+  header, nav, button {
+    display: none;
+  }
+
+  .no-print {
+    display: none;
+  }
+}

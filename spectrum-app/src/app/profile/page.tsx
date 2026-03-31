@@ -29,7 +29,7 @@ export default function Profile() {
       setResponses(JSON.parse(stored))
     }
   }, [])
-
+// Generate chart data by flattening the trait categories and mapping them to the user's responses. Default to 3 (neutral) if no response is found.
   const chartData = traitCategories.flatMap((category) =>
     category.traits.map((trait) => ({
       name: trait.label,
