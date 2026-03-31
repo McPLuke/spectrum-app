@@ -22,13 +22,20 @@ import SupportRecommendations from "@/components/profile/SupportRecommendations"
 // This page is a placeholder for the user's profile. It will display their strengths, support needs, and trait summary based on their responses.
 export default function Profile() {
   const [responses, setResponses] = useState<TraitResponses>({})
+  const [loading, setLoading] = useState(true)
   
   useEffect(() => {
     const stored = localStorage.getItem("spectrumResponses")
+
+    setTimeout(() => {
     if (stored) {
       setResponses(JSON.parse(stored))
     }
+    setLoading(false)
+  }, 300)
+    
   }, [])
+  
 // Generate chart data by flattening the trait categories and mapping them to the user's responses. Default to 3 (neutral) if no response is found.
   const chartData = traitCategories.flatMap((category) =>
     category.traits.map((trait) => ({

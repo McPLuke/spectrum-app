@@ -12,14 +12,16 @@ export default function Button({
   href,
   variant = "primary",
 }: ButtonProps) {
+
+
   const baseStyles =
-    "px-4 py-2 rounded-md text-sm font-medium transition focus-visible:outline-none"
+    "px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ease-in-out focus-visible:outline-none"
 
   const variants = {
   primary:
-    "bg-spectrum-primary text-white hover:opacity-90",
+    "bg-spectrum-primary text-white hover:opacity-90 active:scale-[0.98]",
   secondary:
-    "bg-white border border-spectrum-border hover:bg-gray-50",
+    "bg-white border border-spectrum-border hover:bg-gray-50 active:scale-[0.98]",
   }
 
   const className = `${baseStyles} ${variants[variant]}`

@@ -23,7 +23,7 @@ export default function TraitSlider({
         max={5}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-spectrum-primary"
+        className="w-full accent-spectrum-primary transition-all duration-150"
       />
 
       <div className="flex justify-between text-xs text-spectrum-muted">

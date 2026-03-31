@@ -13,6 +13,13 @@
   --border: #E5E7EB;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -22,6 +29,7 @@
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
