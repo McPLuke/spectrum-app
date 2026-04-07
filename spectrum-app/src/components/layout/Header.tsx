@@ -1,4 +1,5 @@
 import Nav from "./Nav"
+import ThemeToggle from "@/components/ui/ThemeToggle"
 
 export default function Header() {
   return (
@@ -6,6 +7,7 @@ export default function Header() {
       <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
         <h1 className="text-lg font-semibold text-spectrum-text">Spectrum</h1>
         <Nav />
+        <ThemeToggle />
       </div>
     </header>
   )

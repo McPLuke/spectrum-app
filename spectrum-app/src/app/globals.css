@@ -13,6 +13,20 @@
   --border: #E5E7EB;
 }
 
+/* 🌙 Dark / Low-Stimulation Mode */
+.dark {
+  --bg: #0F172A;
+  --surface: #1E293B;
+
+  --primary: #7AA6C2;
+  --secondary: #4A6FA5;
+  --accent: #6B9EA8;
+
+  --text: #E5E7EB;
+  --muted: #9CA3AF;
+  --border: #334155;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
@@ -25,6 +39,10 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 html {
