@@ -45,6 +45,11 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+.reduce-motion * {
+  transition: none !important;
+  animation: none !important;
+}
+
 html {
   height: 100%;
   scroll-behavior: smooth;
