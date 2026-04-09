@@ -6,6 +6,9 @@ type ProfileCardProps = {
   isPublic: boolean
 }
 
+// The ProfileCard component displays a user's profile information, including their display name,
+//  an optional bio, and their profile visibility status (public or private), 
+// all styled within a card component.
 export default function ProfileCard({
   displayName,
   bio,

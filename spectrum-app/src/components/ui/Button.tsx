@@ -7,6 +7,7 @@ type ButtonProps = {
   variant?: "primary" | "secondary"
 }
 
+// A reusable Button component that can render as either a <button> or a <Link> based on the presence of the href prop. It supports two variants: primary and secondary, each with its own styling.
 export default function Button({
   children,
   href,
@@ -14,9 +15,11 @@ export default function Button({
 }: ButtonProps) {
 
 
+  // Base styles for all buttons
   const baseStyles =
     "px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ease-in-out focus-visible:outline-none"
 
+    // Variant-specific styles
   const variants = {
   primary:
     "bg-spectrum-primary text-white hover:opacity-90 active:scale-[0.98]",

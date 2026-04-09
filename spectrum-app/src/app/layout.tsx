@@ -10,6 +10,9 @@ export const metadata = {
   description: "Self-representation profiles for the autistic spectrum"
 }
 
+// The RootLayout component defines the overall structure of the Spectrum application,
+//  including the header, footer, and main content area. 
+// It wraps all pages and ensures a consistent layout across the app.
 export default function RootLayout({
   children,
 }: {

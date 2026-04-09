@@ -5,6 +5,7 @@ type Props = {
   onPrev: () => void
 }
 
+// The CategoryStepper component provides navigation controls for a multi-step questionnaire.
 export default function CategoryStepper({
   current,
   total,

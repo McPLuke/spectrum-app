@@ -9,6 +9,8 @@ type Props = {
   supportNeeds: SupportNeed[]
 }
 
+// The SupportNeedsList component displays a list of support needs for a user's profile,
+//  rendering each need as a list item within a styled card component.
 export default function SupportNeedsList({ supportNeeds }: Props) {
   return (
     <Card>

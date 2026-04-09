@@ -1,3 +1,4 @@
+// This file defines the traits and categories used in the application to capture user preferences and characteristics.
 export const traitCategories = [
   {
     id: "sensory",

@@ -29,6 +29,9 @@ export default function Questionnaire() {
   }))
 )
 
+// The Questionnaire component provides an interactive interface
+//  for users to self-assess their traits across various categories.
+// It includes sliders for each trait, a visual summary chart, and navigation between categories.
   return (
     <div className="space-y-8 max-w-xl">
 

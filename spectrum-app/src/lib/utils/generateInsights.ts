@@ -36,7 +36,7 @@ export function generateInsights(responses: TraitResponses): string[] {
       )
     }
   }
-
+  // Written Communication
   if (responses.written !== undefined) {
     if (responses.written >= 4) {
       insights.push(

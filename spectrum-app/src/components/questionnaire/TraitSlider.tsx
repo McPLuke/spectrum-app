@@ -6,6 +6,9 @@ type Props = {
   onChange: (value: number) => void
 }
 
+// The TraitSlider component renders a labeled slider input for a questionnaire,
+//  allowing users to select a value between 1 and 5 
+// with corresponding labels for the minimum and maximum values.
 export default function TraitSlider({
   label,
   minLabel,

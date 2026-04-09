@@ -10,6 +10,8 @@ type Props = {
   strengths: Strength[]
 }
 
+// The StrengthList component displays a list of strengths for a user's profile,
+//  rendering each strength with its title and optional description within a styled card component.
 export default function StrengthList({ strengths }: Props) {
   return (
     <Card>

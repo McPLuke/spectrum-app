@@ -1,4 +1,5 @@
 export default function About() {
+  // This page provides an overview of the Spectrum application, its purpose, and how it can be used.
   return (
     <div className="space-y-6 max-w-3xl">
 

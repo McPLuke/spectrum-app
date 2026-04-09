@@ -31,6 +31,8 @@ export default function ShareProfile() {
     }))
   )
 
+  // This page is designed for sharing or printing the user's profile.
+  // It includes a print button and is styled for a clean presentation without the usual app navigation.
   return (
     <div className="min-h-screen bg-spectrum-bg flex justify-center py-10">
 

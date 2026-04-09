@@ -19,7 +19,8 @@ import GeneratedSummary from "@/components/profile/GeneratedSummary"
 import { generateRecommendations } from "@/lib/utils/generateRecommendations"
 import SupportRecommendations from "@/components/profile/SupportRecommendations"
 
-// This page is a placeholder for the user's profile. It will display their strengths, support needs, and trait summary based on their responses.
+// This page is a placeholder for the user's profile. 
+// It will display their strengths, support needs, and trait summary based on their responses.
 export default function Profile() {
   const [responses, setResponses] = useState<TraitResponses>({})
   const [loading, setLoading] = useState(true)
@@ -36,7 +37,8 @@ export default function Profile() {
     
   }, [])
   
-// Generate chart data by flattening the trait categories and mapping them to the user's responses. Default to 3 (neutral) if no response is found.
+// Generate chart data by flattening the trait categories and mapping them to the user's responses. 
+// Default to 3 (neutral) if no response is found.
   const chartData = traitCategories.flatMap((category) =>
     category.traits.map((trait) => ({
       name: trait.label,
@@ -47,6 +49,7 @@ export default function Profile() {
   const insights = generateInsights(responses)
   const recommendations = generateRecommendations(responses)
 
+  // Show a loading state while fetching responses from localStorage
   return (
     <div className="space-y-8 max-w-2xl mx-auto px-4 py-8">
 

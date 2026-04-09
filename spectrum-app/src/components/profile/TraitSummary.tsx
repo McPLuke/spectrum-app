@@ -4,6 +4,8 @@ type Props = {
   responses: Record<string, number>
 }
 
+// The TraitSummary component takes a set of trait responses and displays them in a card format,
+//  showing each trait and its corresponding value in a list.
 export default function TraitSummary({ responses }: Props) {
   return (
     <Card>

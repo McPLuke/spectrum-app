@@ -1,3 +1,4 @@
+// This file contains a sample user profile that can be used for testing and development purposes.
 export const sampleProfile = {
   id: "1",
   displayName: "Alex Morgan",

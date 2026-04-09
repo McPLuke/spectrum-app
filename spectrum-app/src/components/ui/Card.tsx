@@ -4,6 +4,8 @@ import { ReactNode } from "react"
   children: ReactNode
 }*/
 
+// A reusable Card component that provides a consistent style for displaying content in a card format.
+//  It includes padding, border, rounded corners, and a subtle shadow effect on hover.
 export default function Card({ children }: { children: ReactNode }) {
   return (
     <div className="bg-spectrum-surface border border-spectrum-border rounded-xl 

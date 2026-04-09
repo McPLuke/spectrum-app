@@ -1,6 +1,9 @@
 import Button from "@/components/ui/Button"
 import Card from "@/components/ui/Card"
 
+// The Home component serves as the landing page for the Spectrum application,
+//  providing an introduction to the platform and guiding users to explore their profiles,
+//  strengths, and support needs through a clean and engaging interface.
 export default function Home() {
   return (
     <div className="space-y-12">

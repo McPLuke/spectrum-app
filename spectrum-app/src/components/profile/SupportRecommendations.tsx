@@ -9,6 +9,9 @@ export default function SupportRecommendations({
 }: Props) {
   if (recommendations.length === 0) return null
 
+  // The SupportRecommendations component takes a list of support recommendations and displays them 
+  // in a card format,
+  //  showing each recommendation as a bullet point in a list.
   return (
     <Card>
       <h3 className="text-lg font-semibold mb-3">

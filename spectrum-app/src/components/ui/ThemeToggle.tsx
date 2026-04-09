@@ -5,6 +5,7 @@ import { useTheme } from "@/lib/hooks/useTheme"
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
 
+  // The button displays the current theme and allows the user to toggle between light and dark modes.
   return (
     <button
       onClick={toggleTheme}
