@@ -17,7 +17,7 @@ export default function Home() {
         </p>
 
         <div className="flex gap-4">
-          <Button href="/profile">View Profile</Button>
+          <Button href="/profile" variant="secondary">View Profile</Button>
           <Button href="/questionnaire" variant="secondary">
             Try Questionnaire
           </Button>
