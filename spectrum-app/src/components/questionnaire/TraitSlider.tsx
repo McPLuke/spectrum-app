@@ -14,7 +14,7 @@ export default function TraitSlider({
   onChange,
 }: Props) {
   return (
-    <div className="bg-white p-6 rounded-xl border border-spectrum-border space-y-6">
+    <div className="bg-spectrum-surface p-6 rounded-xl border border-spectrum-border space-y-6">
       <label className="font-medium">{label}</label>
 
       <input

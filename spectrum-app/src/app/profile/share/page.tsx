@@ -34,7 +34,7 @@ export default function ShareProfile() {
   return (
     <div className="min-h-screen bg-spectrum-bg flex justify-center py-10">
 
-      <div className="w-full max-w-3xl bg-white p-8 rounded-xl border border-spectrum-border space-y-8">
+      <div className="w-full max-w-3xl bg-spectrum-surface p-8 rounded-xl border border-spectrum-border space-y-8">
         <button
             onClick={() => window.print()}
             className="no-print px-4 py-2 border rounded text-sm"
@@ -59,7 +59,7 @@ export default function ShareProfile() {
               Trait Overview
             </h2>
 
-            <div className="bg-white border border-spectrum-border rounded-lg p-4">
+            <div className="bg-spectrum-surface border border-spectrum-border rounded-lg p-4">
               <SpectrumBarChart data={chartData} />
             </div>
           </div>

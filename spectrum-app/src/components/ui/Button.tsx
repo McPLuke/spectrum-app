@@ -21,7 +21,7 @@ export default function Button({
   primary:
     "bg-spectrum-primary text-white hover:opacity-90 active:scale-[0.98]",
   secondary:
-    "bg-white border border-spectrum-border hover:bg-gray-50 active:scale-[0.98]",
+    "bg-spectrum-surface text-spectrum-text border border-spectrum-border hover:bg-spectrum-bg active:scale-[0.98]",
   }
 
   const className = `${baseStyles} ${variants[variant]}`

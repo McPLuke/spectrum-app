@@ -22,7 +22,7 @@ export default function StrengthList({ strengths }: Props) {
           <li key={strength.id}>
             <p className="font-medium">{strength.title}</p>
             {strength.description && (
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-spectrum-muted">
                 {strength.description}
               </p>
             )}

@@ -18,7 +18,7 @@ export default function SupportNeedsList({ supportNeeds }: Props) {
 
       <ul className="space-y-2 list-disc list-inside">
         {supportNeeds.map((need) => (
-          <li key={need.id} className="text-sm text-gray-700">
+          <li key={need.id} className="text-sm text-spectrum-muted">
             {need.description}
           </li>
         ))}

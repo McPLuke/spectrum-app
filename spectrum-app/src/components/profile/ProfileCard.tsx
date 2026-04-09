@@ -16,7 +16,7 @@ export default function ProfileCard({
       <h2 className="text-xl font-semibold">{displayName}</h2>
 
       {bio && (
-        <p className="text-gray-600 mt-2">{bio}</p>
+        <p className="text-spectrum-muted mt-2">{bio}</p>
       )}
 
       <p className="text-sm mt-4">
