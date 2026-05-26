@@ -36,7 +36,7 @@ export default function ShareProfile() {
   return (
     <div className="min-h-screen bg-spectrum-bg flex justify-center py-10">
 
-      <div className="w-full max-w-3xl bg-spectrum-surface p-8 rounded-xl border border-spectrum-border space-y-8">
+      <div className="no-print px-4 py-2 border border-spectrum-border rounded-md text-sm hover:bg-gray-100 transition mb-6">
         <button
             onClick={() => window.print()}
             className="no-print px-4 py-2 border rounded text-sm"
@@ -69,7 +69,7 @@ export default function ShareProfile() {
 
         {/* Insights */}
         {insights.length > 0 && (
-          <div>
+          <div className="break-inside-avoid">
             <h2 className="text-xl font-semibold mb-3">
               Summary
             </h2>
@@ -82,7 +82,7 @@ export default function ShareProfile() {
 
         {/* Recommendations */}
         {recommendations.length > 0 && (
-          <div>
+          <div className="break-inside-avoid">
             <h2 className="text-xl font-semibold mb-3">
               Suggested Supports
             </h2>
@@ -97,8 +97,11 @@ export default function ShareProfile() {
         
         {/* Footer note */}
         <div className="text-xs text-spectrum-muted border-t pt-4">
-          This profile is self-reported and intended to support communication and understanding.
+          Generated with Spectrum • Self-advocacy and accessibility support tool
         </div>
+        <p className="text-xs text-spectrum-muted">
+          Generated on {new Date().toLocaleDateString()}
+        </p>
 
       </div>
 

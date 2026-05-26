@@ -101,3 +101,30 @@ button {
     display: none;
   }
 }
+/* print styles */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  header,
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  main {
+    padding: 0;
+    margin: 0;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+
+  .print-card {
+    border: none !important;
+  }
+}
